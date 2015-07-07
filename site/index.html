@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Screen Background Video</title>
+  <meta name="description" content="Full screen background video demo">
+  <meta name="author" description="Christine Palma">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oxygen:400,300,700">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+<div class="column_01">
+  <h1 class="neon">SING TO WIN</h1>
+</div><!-- /column_01 -->
+
+<div class="column_02">
+  <img src="animation_tests/blonde_dancer.gif" height="300px" />
+</div><!-- /column_02 -->
+
+<div class="column_03">
+<h2 class="neon">CHOOSE YOUR DANCER</h2>
+<img src="images/dancer_01_blonde.png">
+<img src="images/dancer_02_white_boy.png">
+<img src="images/dancer_03_black_boy.png">
+<img src="images/dancer_04_brunette.png">
+
+<h2 class="neon">CHOOSE YOUR SONG</h2>
+<ul>
+<li>Rehab by Amy Winehouse</li>
+
+<li>Float On by Modest Mouse</li>
+
+<li>Bohemian Rhapsody by Queen</li>
+
+<li>Tubthumbing by Chambawamba</li>
+
+<li>Hey Jude by The Beatles</li>
+
+<li>Baby Got Back by Sir Mix-A-Lot</li>
+</ul>
+</div><!-- /column_03 -->
+
+
+<!-- <div class="footer">
+<marquee behavior="scroll" direction="left" scrollamount="10" bgcolor="#000" style="color:white; font-size:36px; color:white; font-family:century gothic">They tried to make me go to rehab but I said, 'No, no, no.'
+Yes, I've been black but when I come back you'll know, know, know
+I ain't got the time and if my daddy thinks I'm fine
+He's tried to make me go to rehab but I won't go, go, go
+</marquee>
+</div> -->
+
+</div><!-- /container -->
+
+<video id="my-video" class="video" muted loop>
+  <source src="media/CosmicBeat_01_75_percent_quality.mp4" type="video/mp4">
+  <source src="media/demo.ogv" type="video/ogg">
+  <source src="media/demo.webm" type="video/webm">
+</video><!-- /video -->
+
+<script>
+(function() {
+  /**
+   * Video element
+   * @type {HTMLElement}
+   */
+  var video = document.getElementById("my-video");
+  /**
+   * Check if video can play, and play it
+   */
+  video.addEventListener( "canplay", function() {
+    video.play();
+  });
+})();
+</script>
+
+</body>
+</html>
