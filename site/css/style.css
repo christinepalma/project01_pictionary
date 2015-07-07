@@ -1,191 +1,28 @@
-/*!
-Styles for full screen background video demo
-*/
-/* =============================================================================
-  RESETS
-============================================================================= */
-html,
-body,
-div,
-h1,
-p,
-a,
-video {
-  margin: 0;
-  padding: 0;
-}
+#my-canvas {
+    border: 0 solid #000;
+    background-image: url("../images/easel_pad.png");
+  }
 
-/* =============================================================================
-  HTML, BODY
-============================================================================= */
-html,
-body {
-  height: 100%;
-}
-
-body {
-  font-size: 16px;
-  font-family: "Oxygen", sans-serif;
-  line-height: 1.5;
-}
-
-/* =============================================================================
-  CONTENT
-============================================================================= */
 .container {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-}
-
-.footer {
-   position:relative;
-   bottom:0;
-   width:100%;
-   height:60px;   /* Height of the footer */
-  }
-
-.column_01 {
-  position: fixed;
-  width: 500px;
-  top: 10px;
-  border: 2px #fff solid;
-}
-
-.column_02 {
-  position: relative;
-  top: 120px;
   margin: 0 auto;
-  width: 350px;
-  border: 2px #fff solid;
+  position: absolute;
 }
 
-.column_03 {
-  position: fixed;
-  float: right;
-  width: 450px;
-  height: ;
-  right: 10px;
+.dice {
+  position: absolute;
   top: 10px;
-  border: 2px #fff solid;
-}
-
-
-
-h1 {
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-  font-size: 110px;
-  line-height: 100px;
+  left: 500px;
+  display: inline;
+  width: 150px;
+  height: 150px;
+  border: 2px solid;
   text-align: center;
-  text-transform: uppercase;
-  text-rendering: optimizeLegibility;
-}
+  font-size: 120px;
+ }
 
-h2 {
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-  font-size: 24px;
-  text-align: left;
-  text-transform: uppercase;
-  text-rendering: optimizeLegibility;
-}
-
-.neon {
-    color: #fff;
-    text-decoration:none;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
-    animation: neon1 1.5s ease-in-out infinite alternate;
+.roll_dice {
+  position: absolute;
+  top: 170px;
+  left: 503px;
+  width: 150px;
   }
-
-
-  ul {
-  	list-style-type: none;
-  	padding-left: 0;
-  	margin-left: 0;
-  	}
-  li {
-    color: #fff;
-    background: url("./images/dot.png") left center no-repeat;
-    padding-left: 0;
-    margin-left: 10px;
-    margin-bottom: 15px;
-}
-
-.deepshadow {
-  color: #e0dfdc;
-  /*background-color: #333;*/
-  letter-spacing: .1em;
-  text-shadow:
-    0 -1px 0 #fff,
-    0 1px 0 #2e2e2e,
-    0 2px 0 #2c2c2c,
-    0 3px 0 #2a2a2a,
-    0 4px 0 #282828,
-    0 5px 0 #262626,
-    0 6px 0 #242424,
-    0 7px 0 #222,
-    0 8px 0 #202020,
-    0 9px 0 #1e1e1e,
-    0 10px 0 #1c1c1c,
-    0 11px 0 #1a1a1a,
-    0 12px 0 #181818,
-    0 13px 0 #161616,
-    0 14px 0 #141414,
-    0 15px 0 #121212,
-    0 22px 30px rgba(0, 0, 0, 0.9);
-}
-
-
-/* =============================================================================
-  VIDEO
-============================================================================= */
-.video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-/*NEON ANIMATION FOR TEXT*/
-/*glow for webkit*/
-@-webkit-keyframes neon1 {
-  from {
-    text-shadow: 0 0 10px #fff,
-               0 0 20px  #fff,
-               0 0 30px  #fff,
-               0 0 40px  #FF1177,
-               0 0 70px  #FF1177,
-               0 0 80px  #FF1177,
-               0 0 100px #FF1177,
-               0 0 150px #FF1177;
-  }
-  to {
-    text-shadow: 0 0 5px #fff,
-               0 0 10px #fff,
-               0 0 15px #fff,
-               0 0 20px #FF1177,
-               0 0 35px #FF1177,
-               0 0 40px #FF1177,
-               0 0 50px #FF1177,
-               0 0 75px #FF1177;
-  }
-}
-
-
-
-
-#footer {position: relative;
-	margin-top: -150px; /* negative value of footer height */
-	height: 150px;
-	clear:both;}

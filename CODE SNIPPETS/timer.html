@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <script type="text/javascript">
+    long time = 1*60000;
+    void setup() {
+      size(300,300);
+    }
+
+    boolean running = false;
+    long start = millis();
+    float a = 0;
+
+    void draw() {
+      if ( running ) {
+        a = (millis() - start)* TWO_PI/time;
+        if ( a > TWO_PI ) running = false;
+      }
+      noStroke();
+      background( 0 );
+      if ( running ) {
+        fill(128,255,0);
+      } else {
+        fill(255,0,0);
+      }
+      arc( 150,150,200,200, -PI/2, -PI/2 + a);
+      fill(0);
+      arc( 150,150,150,150, -PI/2, -PI/2 + a+.1 );
+      fill(255);
+      long rem = time - ( millis() - start );
+      if ( running ) {
+        int m = floor(rem/60000.0);
+        int s = int((rem/60000.0 - m) * 60);
+        text(nf(m,2)+":"+nf(s,2),135,150);
+      } else {
+        int m = floor(time/60000.0);
+        int s = int((time/60000.0 - m) * 60);
+        text(nf(m,2)+":"+nf(s,2),135,150);
+      }
+    }
+
+    void mousePressed() {
+      if ( !running ) {
+        start = millis();
+        running = true;
+      }
+    }
+
+    </script>
+  </body>
+</html>

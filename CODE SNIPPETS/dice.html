@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <STYLE type="text/css">
+     .dice {
+        width: 150px;
+        height: 150px;
+        border: 2px solid;
+        text-align: center;
+        font-size: 120px;
+}
+
+     </STYLE>
+
+  </head>
+  <body>
+
+<div class="dice">6</div>
+<button>Roll Dice!</button>
+
+<script type="text/javascript">
+
+var diceFinalValue = document.querySelector(".dice");
+var button = document.querySelector('button');
+
+  function rollDice() {
+    console.log('rollingDice');
+  diceFinalValue.innerText = Math.floor(Math.random() * 6) + 1;
+}
+button.addEventListener("click", rollDice);
+
+
+
+// $( ".dice" ).on( "click", function() {
+//     console.log( "click" );
+// });
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
