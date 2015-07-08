@@ -136,15 +136,32 @@ button_roll_dice.addEventListener("click", rollDice);
 // The answer is drawn from the hint category.
 // There is also one array for the categories.
 
-var arrayNames = ["person, place or animal", "object", "action", "difficult word"];
+// CATEGORY OBJECTS WITHIN AN OBJECT
+var categoriesArray = ["person", "thing", "action","difficult_word"];
+var choice;
 
-var personPlaceAnimalArray = ["canary", "australia", "manicurist", "jacques cousteau"];
+var answer = document.querySelector(".answer");
+var answerLinkedToCategory;
 
-var objectArray = ["guitar", "dictionary", "birthday cake", "backpack"];
 
-var actionArray = ["hunt", "double dutch", "shop", "workout"];
-
-var difficultWordArray = ["flaneur", "voodoo", "meta", "pillow talk"];
+var categories = {
+  person: {
+    hint: "person, place or animal",
+    answer: ["canary", "australia", "manicurist", "jacques cousteau"]
+  },
+  thing: {
+    hint: "object",
+    answer: ["guitar", "dictionary", "birthday cake", "backpack"]
+  },
+  action: {
+    hint: "action",
+    answer: ["hunt", "double dutch", "shop", "workout"]
+  },
+  difficult_word: {
+    hint: "difficult word",
+    answer: ["flaneur", "voodoo", "meta", "pillow talk"]
+  }
+};
 
 
 //HINT BOX / CATEGORIES - This is triggered by a button
@@ -152,23 +169,10 @@ var hint = document.querySelector(".hint");
 var button_hint = document.querySelector(".button_hint");
 
 function getHint() {
-console.log('gettingHint');
-hint.innerText = arrayNames[(Math.floor(Math.random() * 3) + 0)];
+choice = categoriesArray[Math.floor(Math.random() * 3) + 0];
+hint.innerHTML = categories[choice].hint;
+answerLinkedToCategory = categories[choice].answer[Math.floor(Math.random() * 3) + 0];
+answer.innerText = answerLinkedToCategory;
 }
 
 button_hint.addEventListener("click", getHint);
-
-
-// CONNECTING CATEGORIES TO THEIR RESPECTIVE ARRAYS
-
-var answer = document.querySelector(".answer");
-
-// answer.innerText = arrayNames[0] = personPlaceAnimalArray[(Math.floor(Math.random() * 3) + 0)];
-// answer.innerText = arrayNames[1] = objectArray[(Math.floor(Math.random() * 3) + 0)];
-// answer.innerText = arrayNames[2] = actionArray[(Math.floor(Math.random() * 3) + 0)];
-// answer.innerText = arrayNames[3] = difficultWordArray[(Math.floor(Math.random() * 3) + 0)];
-
-answer.innerText = personPlaceAnimalArray[(Math.floor(Math.random() * 3) + 1)];
-answer.innerText = objectArray[(Math.floor(Math.random() * 3) + 1)];
-answer.innerText = actionArray[(Math.floor(Math.random() * 3) + 1)];
-answer.innerText = difficultWordArray[(Math.floor(Math.random() * 3) + 1)];
