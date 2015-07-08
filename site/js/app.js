@@ -1,38 +1,42 @@
 var myCanvas = document.getElementById("my-canvas");
 var ctx = myCanvas.getContext("2d");
-ctx.beginPath();
-
-// triangle
-ctx.moveTo(100,250);
-ctx.lineTo(200,150);
-ctx.stroke();
-ctx.moveTo(200,150);
-ctx.lineTo(300,250);
-ctx.stroke();
-// ctx.moveTo(150,150);
-// ctx.lineTo(100,350);
+// ctx.beginPath();
+//
+// // triangle
+// ctx.moveTo(100,250);
+// ctx.lineTo(200,150);
 // ctx.stroke();
-
-// square
-ctx.moveTo(100,400);
-ctx.lineTo(300,400);
-ctx.stroke();
-ctx.moveTo(300,400);
-ctx.lineTo(300,250);
-ctx.stroke();
-ctx.moveTo(300,250);
-ctx.lineTo(100,250);
-ctx.stroke();
-ctx.moveTo(100,250);
-ctx.lineTo(100,400);
-ctx.stroke();
-
-
+// ctx.moveTo(200,150);
+// ctx.lineTo(300,250);
+// ctx.stroke();
+// // ctx.moveTo(150,150);
+// // ctx.lineTo(100,350);
+// // ctx.stroke();
+//
+// // square
+// ctx.moveTo(100,400);
+// ctx.lineTo(300,400);
+// ctx.stroke();
+// ctx.moveTo(300,400);
+// ctx.lineTo(300,250);
+// ctx.stroke();
+// ctx.moveTo(300,250);
+// ctx.lineTo(100,250);
+// ctx.stroke();
+// ctx.moveTo(100,250);
+// ctx.lineTo(100,400);
+// ctx.stroke();
+//
+//
 // EVENT LISTENER TO MOUSE - MOUSEDOWN, MOUSEUP, MOUSEMOVE
 // AND LOG COORDINATES
+
+
+//needs to draw when mouse is clicked or moving
 var isPenDown = false;
 
 function penDown(evt) {
+  ctx.beginPath();
   console.log("This is penDown");
   console.log(evt.layerX, evt.layerY);
   isPenDown = true;
@@ -40,8 +44,10 @@ function penDown(evt) {
 
 function penMove(evt) {
   console.log("evt.layerX, evt.layerY");
-  ctx.lineTo(evt.layerX, evt.layerY);
-  ctx.stroke();
+  if (isPenDown){
+    ctx.lineTo(evt.layerX, evt.layerY);
+    ctx.stroke();
+  }
 }
 
 function penUp(evt) {
