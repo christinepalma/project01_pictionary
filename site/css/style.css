@@ -20,9 +20,68 @@
   font-size: 120px;
  }
 
-.roll_dice {
+.button_roll_dice {
   position: absolute;
   top: 170px;
   left: 503px;
   width: 150px;
   }
+
+
+.time {
+  position: absolute;
+  top: 10px;
+  left: 700px;
+  width: 150px;
+  font-size: 120px;
+  }
+
+.dialogue_box {
+  position: absolute;
+  top: 70px;
+  left: 800px;
+  width: 150px;
+  font-size: 120px;
+  }
+
+
+.button_30sec_alert {
+  position: absolute;
+  top: 70px;
+  left: 800px;
+  }
+
+
+.hint {
+  width: 150px;
+  height: 150px;
+  border: 2px solid;
+  position: absolute;
+  top: 10px;
+  left: 1050px;
+  width: 150px;
+  font-size: 36px;
+  text-align: center;
+}
+
+
+.button_hint {
+  position: absolute;
+  top: 170px;
+  left: 1050px;
+  width: 150px;
+}
+
+
+
+.answer {
+  width: 150px;
+  height: 150px;
+  border: 2px solid;
+  position: absolute;
+  top: 400px;
+  left: 1050px;
+  width: 150px;
+  font-size: 36px;
+  text-align: center;
+}
