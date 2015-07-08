@@ -29,10 +29,8 @@ var ctx = myCanvas.getContext("2d");
 //
 //
 // EVENT LISTENER TO MOUSE - MOUSEDOWN, MOUSEUP, MOUSEMOVE
-// AND LOG COORDINATES
+// AND LOG COORDINATES. DRAWING!
 
-
-//needs to draw when mouse is clicked or moving
 var isPenDown = false;
 
 function penDown(evt) {
@@ -55,8 +53,6 @@ function penUp(evt) {
   isPenDown = false;
 }
 
-
-
 myCanvas.addEventListener("mousedown", penDown);
 
 myCanvas.addEventListener("mouseup", penUp);
@@ -65,25 +61,7 @@ myCanvas.addEventListener("mousemove", penMove );
 
 
 
-// COUNTDOWN TIMER
-// function startTimer(duration, display) {
-//     var timer = duration, minutes, seconds;
-//     setInterval(function () {
-//         minutes = parseInt(timer / 60, 10)
-//         seconds = parseInt(timer % 60, 10);
-//
-//         minutes = minutes < 10 ? "0" + minutes : minutes;
-//         seconds = seconds < 10 ? "0" + seconds : seconds;
-//
-//         display.textContent = minutes + ":" + seconds;
-//
-//         if (--timer < 10) {
-//             timer = duration;
-//         }
-//     }, 1000);
-// }
-
-
+//TIMER
 function startTimer(duration, display) {
     var start = Date.now(),
         diff,
@@ -126,6 +104,8 @@ window.onload = function () {
     startTimer(oneMinute, display);
 };
 
+//STOP AND START TIMER
+
 
 //ALERT DIALOGUE BOX AT 30 SECONDS
 
@@ -154,6 +134,7 @@ button_roll_dice.addEventListener("click", rollDice);
 // The name of the array is also the hint. There is a hint box.
 // Each array has words that will show up at random in an answer box,
 // The answer is drawn from the hint category.
+// There is also one array for the categories.
 
 var arrayNames = ["person, place or animal", "object", "action", "difficult word"];
 
@@ -163,8 +144,10 @@ var objectArray = ["guitar", "dictionary", "birthday cake", "backpack"];
 
 var actionArray = ["hunt", "double dutch", "shop", "workout"];
 
-var difficultWordArray = ["flaneur", "superstition", "meta", "pillow talk"];
+var difficultWordArray = ["flaneur", "voodoo", "meta", "pillow talk"];
 
+
+//HINT BOX / CATEGORIES - This is triggered by a button
 var hint = document.querySelector(".hint");
 var button_hint = document.querySelector(".button_hint");
 
@@ -174,3 +157,18 @@ hint.innerText = arrayNames[(Math.floor(Math.random() * 3) + 0)];
 }
 
 button_hint.addEventListener("click", getHint);
+
+
+// CONNECTING CATEGORIES TO THEIR RESPECTIVE ARRAYS
+
+var answer = document.querySelector(".answer");
+
+// answer.innerText = arrayNames[0] = personPlaceAnimalArray[(Math.floor(Math.random() * 3) + 0)];
+// answer.innerText = arrayNames[1] = objectArray[(Math.floor(Math.random() * 3) + 0)];
+// answer.innerText = arrayNames[2] = actionArray[(Math.floor(Math.random() * 3) + 0)];
+// answer.innerText = arrayNames[3] = difficultWordArray[(Math.floor(Math.random() * 3) + 0)];
+
+answer.innerText = personPlaceAnimalArray[(Math.floor(Math.random() * 3) + 1)];
+answer.innerText = objectArray[(Math.floor(Math.random() * 3) + 1)];
+answer.innerText = actionArray[(Math.floor(Math.random() * 3) + 1)];
+answer.innerText = difficultWordArray[(Math.floor(Math.random() * 3) + 1)];
