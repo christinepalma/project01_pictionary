@@ -1,10 +1,13 @@
-/*#my-canvas {
-    border: 0 solid #000;
-    background-image: url("../images/easel_pad.png");
-  }*/
+body {
+  background-image: url("../images/blue_polygon_background_tile.jpg");
+}
+
+
+
 
   #my-canvas {
       border: 20px solid #000;
+      background-color: #fff;
     }
 
 .container {
@@ -59,8 +62,8 @@
 
 .button_30sec_alert {
   position: absolute;
-  top: 70px;
-  left: 800px;
+  top: 140px;
+  left: 0;
   }
 
 
@@ -91,11 +94,15 @@
   height: 150px;
   border: 2px solid;
   position: absolute;
-  top: 400px;
-  left: 1050px;
+  /*top: 400px;
+  left: 1050px;*/
   width: 150px;
   font-size: 36px;
   text-align: center;
+  z-index: 1;
+  opacity:0;
+
+  transition: opacity .5s;
 }
 
 
@@ -107,6 +114,29 @@
   font-size: 36px;
   text-align: center;
 }
+
+/*MAKE ANSWER HIDDEN*/
+#cover_answer {
+  width: 150px;
+  height: 150px;
+  border: 2px solid;
+  position: absolute;
+  top: 400px;
+  left: 1050px;
+  background-color: #fff;
+  z-index: 2;
+
+  transition: background-color .5s;
+}
+
+#cover_answer:hover {
+    background:rgba(0,0,0,0);
+}
+#cover_answer:hover .answer {
+  opacity:1;
+}
+
+
 
 .guess_box {
   position: absolute;
@@ -125,4 +155,132 @@
   padding: 10px;
   border: solid 5px #000;
   transition: border 0.3s;
+}
+
+
+
+/* THESE ARE COLORS FOR CANVAS */
+.colors {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border: 0 black solid;
+}
+
+.black {
+  position: absolute;
+  top: 20px;
+  left: 0 ;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+}
+
+.red {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}
+
+.green {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 20px;
+  height: 20px;
+  background-color: green;
+}
+
+.yellow {
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+}
+
+.blue {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+}
+
+.orange {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: orange;
+}
+
+.pink {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+}
+
+.purple {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  width: 20px;
+  height: 20px;
+  background-color: purple;
+}
+
+.eraser {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  border: 1px black solid;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
+
+
+
+/* FULLSCREEN BACKGROUND VIDEO  */
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('#') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+.stopfade {
+   opacity: .5;
+}
+
+#winner {
+  font-family: impact, sans-serif;
+  color: white;
+  padding: 2rem;
+  width: 33%;
+  margin:2rem;
+  float: right;
+}
+h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .3rem;
 }
