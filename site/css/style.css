@@ -8,7 +8,7 @@ body {
   #my-canvas {
       border: 20px solid #000;
       background-color: #fff;
-
+      /*cursor: "pen_cursor.ico";*/
 }
 
 .container {
