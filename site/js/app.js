@@ -34,6 +34,9 @@ myCanvas.addEventListener("mouseup", penUp);
 
 myCanvas.addEventListener("mousemove", penMove );
 
+
+
+
 //EVENT LISTENERS FOR COLORS
 // document.querySelector(".black").addEventListener("click", color);
 // document.querySelector(".red").addEventListener("click", color);
@@ -77,7 +80,12 @@ myCanvas.addEventListener("mousemove", penMove );
 //     else;
 // }
 
+
+
+
+
 //TIMER
+
 function startTimer(duration, display) {
     var start = Date.now(),
         diff,
@@ -119,6 +127,8 @@ window.onload = function () {
         display = document.querySelector('.time');
     startTimer(oneMinute, display);
 };
+
+
 
 //STOP AND START TIMER
 
