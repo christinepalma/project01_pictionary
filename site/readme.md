@@ -100,6 +100,8 @@ If your team doesn't guess the word, play continues with the other team's turn.
 <h1>TECHNOLOGY</h1>
 
 •CANVAS
+•Web Audio API
+•Objects
 
 
 

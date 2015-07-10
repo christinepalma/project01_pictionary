@@ -7,6 +7,53 @@ var ctx = myCanvas.getContext("2d");
 var isPenDown = false;
 var x = "black";
 
+
+//EVENT LISTENERS FOR COLORS
+document.querySelector(".black").addEventListener("click", color);
+document.querySelector(".red").addEventListener("click", color);
+document.querySelector(".green").addEventListener("click", color);
+document.querySelector(".blue").addEventListener("click", color);
+document.querySelector(".yellow").addEventListener("click", color);
+document.querySelector(".pink").addEventListener("click", color);
+document.querySelector(".orange").addEventListener("click", color);
+document.querySelector(".purple").addEventListener("click", color);
+document.querySelector(".white").addEventListener("click", color);
+
+//THIS GIVES YOU THE OPTION OF COLORS
+function color(obj) {
+    switch (obj) {
+        case "green":
+            x = "green";
+            break;
+        case "blue":
+            x = "blue";
+            break;
+        case "red":
+            x = "red";
+            break;
+        case "yellow":
+            x = "yellow";
+            break;
+        case "orange":
+            x = "orange";
+            break;
+        case "pink":
+            x = "pink";
+                break;
+        case "purple":
+            x = "purple";
+                break;
+        case "black":
+            x = "black";
+            break;
+        case "eraser":
+            x = "white";
+            break;
+    }
+    else;
+}
+
+
 function penDown(evt) {
   ctx.beginPath();
   console.log("This is penDown");
@@ -33,53 +80,6 @@ myCanvas.addEventListener("mousedown", penDown);
 myCanvas.addEventListener("mouseup", penUp);
 
 myCanvas.addEventListener("mousemove", penMove );
-
-
-
-
-//EVENT LISTENERS FOR COLORS
-// document.querySelector(".black").addEventListener("click", color);
-// document.querySelector(".red").addEventListener("click", color);
-// document.querySelector(".red").addEventListener("click", color);
-// document.querySelector(".red").addEventListener("click", color);
-// document.querySelector(".red").addEventListener("click", color);
-// document.querySelector(".red").addEventListener("click", color);
-
-
-// //THIS GIVES YOU THE OPTION OF COLORS
-// function color(obj) {
-//     switch (obj) {
-//         case "green":
-//             x = "green";
-//             break;
-//         case "blue":
-//             x = "blue";
-//             break;
-//         case "red":
-//             x = "red";
-//             break;
-//         case "yellow":
-//             x = "yellow";
-//             break;
-//         case "orange":
-//             x = "orange";
-//             break;
-//         case "pink":
-//             x = "pink";
-//                 break;
-//         case "purple":
-//             x = "purple";
-//                 break;
-//         case "black":
-//             x = "black";
-//             break;
-//         case "eraser":
-//             x = "white";
-//             break;
-//     }
-//     else;
-// }
-
 
 
 
