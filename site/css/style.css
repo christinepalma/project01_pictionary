@@ -186,13 +186,13 @@ body {
   background-color: red;
 }
 
-.green {
+.chartreuse {
   position: absolute;
   top: 20px;
   left: 40px;
   width: 20px;
   height: 20px;
-  background-color: green;
+  background-color: chartreuse;
 }
 
 .yellow {
@@ -204,40 +204,40 @@ body {
   background-color: yellow;
 }
 
-.blue {
+.cyan {
   position: absolute;
   top: 40px;
   left: 0;
   width: 20px;
   height: 20px;
-  background-color: blue;
+  background-color: cyan;
 }
 
-.orange {
+.orangered {
   position: absolute;
   top: 40px;
   left: 20px;
   width: 20px;
   height: 20px;
-  background-color: orange;
+  background-color: orangered;
 }
 
-.pink {
+.deeppink {
   position: absolute;
   top: 40px;
   left: 40px;
   width: 20px;
   height: 20px;
-  background-color: pink;
+  background-color: deeppink;
 }
 
-.purple {
+.indigo {
   position: absolute;
   top: 40px;
   left: 60px;
   width: 20px;
   height: 20px;
-  background-color: purple;
+  background-color: indigo;
 }
 
 .eraser {
@@ -247,7 +247,7 @@ body {
   border: 1px black solid;
   width: 20px;
   height: 20px;
-  background-color: white;
+  background-color: #fff;
 }
 
 

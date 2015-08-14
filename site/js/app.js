@@ -5,54 +5,7 @@ var ctx = myCanvas.getContext("2d");
 // AND LOG COORDINATES. DRAWING!
 
 var isPenDown = false;
-var x = "black";
-
-
-//EVENT LISTENERS FOR COLORS
-document.querySelector(".black").addEventListener("click", color);
-document.querySelector(".red").addEventListener("click", color);
-document.querySelector(".green").addEventListener("click", color);
-document.querySelector(".blue").addEventListener("click", color);
-document.querySelector(".yellow").addEventListener("click", color);
-document.querySelector(".pink").addEventListener("click", color);
-document.querySelector(".orange").addEventListener("click", color);
-document.querySelector(".purple").addEventListener("click", color);
-document.querySelector(".white").addEventListener("click", color);
-
-//THIS GIVES YOU THE OPTION OF COLORS
-function color(obj) {
-    switch (obj) {
-        case "green":
-            x = "green";
-            break;
-        case "blue":
-            x = "blue";
-            break;
-        case "red":
-            x = "red";
-            break;
-        case "yellow":
-            x = "yellow";
-            break;
-        case "orange":
-            x = "orange";
-            break;
-        case "pink":
-            x = "pink";
-                break;
-        case "purple":
-            x = "purple";
-                break;
-        case "black":
-            x = "black";
-            break;
-        case "eraser":
-            x = "white";
-            break;
-    }
-    else;
-}
-
+var x = "#000";
 
 function penDown(evt) {
   ctx.beginPath();
@@ -82,6 +35,47 @@ myCanvas.addEventListener("mouseup", penUp);
 myCanvas.addEventListener("mousemove", penMove );
 
 
+// //EVENT LISTENERS FOR COLORS
+// document.querySelector(".black").addEventListener("click", color);
+// document.querySelector(".red").addEventListener("click", color);
+// document.querySelector(".chartreuse").addEventListener("click", color);
+// document.querySelector(".cyan").addEventListener("click", color);
+// document.querySelector(".yellow").addEventListener("click", color);
+// document.querySelector(".deeppink").addEventListener("click", color);
+// document.querySelector(".orangered").addEventListener("click", color);
+// document.querySelector(".indigo").addEventListener("click", color);
+// document.querySelector(".eraser").addEventListener("click", color);
+
+// //THIS GIVES YOU THE OPTION OF COLORS
+// function color() {
+//     switch () {
+//         case "chartreuse":
+//             x = "chartreuse";
+//             break;
+//         case "cyan":
+//             x = "cyan";
+//             break;
+//         case "red":
+//             x = "red";
+//             break;
+//         case "yellow":
+//             x = "yellow";
+//             break;
+//         case "orangered":
+//             x = "orangered";
+//             break;
+//         case "deeppink":
+//             x = "deeppink";
+//                 break;
+//         case "indigo":
+//             x = "indigo";
+//                 break;
+//         case "eraser":
+//             x = "#fff";
+//             break;
+//         default:
+//             x = "#000";
+// }
 
 
 //TIMER
@@ -173,19 +167,19 @@ var answerLinkedToCategory;
 var categories = {
   person: {
     hint: "person, place or animal",
-    answer: ["canary", "australia", "manicurist", "jacques cousteau"]
+    answer: ["canary", "australia", "carpenter", "unicorn", "north pole", "owl", "obama", "pluto", "hawaii", "anonymous"]
   },
   thing: {
     hint: "object",
-    answer: ["guitar", "dictionary", "birthday cake", "backpack"]
+    answer: ["guitar", "dictionary", "birthday cake", "backpack", "finger", "shoulder", "pants", "laptop", "shoe", "chair"]
   },
   action: {
     hint: "action",
-    answer: ["hunt", "double dutch", "shop", "workout"]
+    answer: ["hunt", "double dutch", "shop", "workout", "fall", "drink", "walk", "drive", "cook", "write"]
   },
   difficult_word: {
     hint: "difficult word",
-    answer: ["flaneur", "voodoo", "meta", "pillow talk"]
+    answer: ["flaneur", "voodoo", "meta", "bruise", "gasoline", "chess", "nightmare", "applause", "macho", "sunburn"]
   }
 };
 
@@ -230,7 +224,7 @@ recognition.start();
 function getHint() {
   choice = categoriesArray[Math.floor(Math.random() * 4) + 0];
   hint.innerHTML = categories[choice].hint;
-  answerLinkedToCategory = categories[choice].answer[Math.floor(Math.random() * 4) + 0];
+  answerLinkedToCategory = categories[choice].answer[Math.floor(Math.random() * 10) + 0];
   answer.innerText = answerLinkedToCategory;
   }
 
@@ -263,7 +257,7 @@ window.addEventListener("keydown", function(e)
 
 
 
-//THIS IS THE FULLSCREEN VIDEO
+//THIS IS THE FULLSCREEN VIDEO FOR THE WINNER
 
 var vid = document.getElementById("bgvid");
 
